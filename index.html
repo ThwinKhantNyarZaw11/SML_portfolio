@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seinn Mar Lar - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #2C3E50 0%, #3498DB 50%, #2980B9 100%);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            position: center;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        .profile-img {
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(123, 58, 237, 0.5);
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen text-white">
+    <div class="flex justify-center pt-4 fixed w-full top-0 z-50">
+        <nav class="glass-nav rounded-full px-8 py-3 w-auto max-w-2xl mx-4">
+            <div class="flex items-center space-x-8">
+                <a href="#" class="text-xl font-bold">Seinn Mar Lar</a>
+                <div class="flex space-x-6">
+                    <a href="#home" class="hover:text-sky-200 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-sky-200 transition-colors">About</a>
+                    <a href="#projects" class="hover:text-sky-200 transition-colors">Projects</a>
+                    <a href="#contact" class="hover:text-sky-200 transition-colors">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="pt-20">
+        <main>
+            <!-- Hero Section -->
+            <section id="home" class="container mx-auto px-6 py-20 text-center">
+                <div class="flex flex-col items-center justify-center space-y-8">
+                    <div class="w-48 h-48 rounded-full overflow-hidden profile-img float-animation mb-6">
+                        <img src="images/Seinn Mar Lar.jpg" alt="Seinn Mar Lar" class="w-full h-full object-cover">
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-sky-200 to-sky-400">Seinn Mar Lar</h1>
+                    <h2 class="text-2xl md:text-3xl mb-4 text-sky-200">Remote Operations Manager</h2>
+                    <p class="text-xl mb-8 text-sky-100">Freelancer at MYANMAR RI FANG</p>
+                    <a href="#contact" class="glass-card px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition duration-300">Get in Touch</a>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="glass-card py-20 my-12">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-sky-200 to-sky-400">About Me</h2>
+                    <div class="max-w-3xl mx-auto">
+                        <p class="text-lg leading-relaxed mb-6 text-sky-100">
+                            As a Remote Operations Manager, I specialize in streamlining business processes and managing remote teams effectively. With extensive experience in project management and team coordination, I help organizations achieve their operational goals while maintaining high efficiency in a remote work environment.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="container mx-auto px-6 py-20">
+                <h2 class="text-4xl font-bold mb-12 text-center bg-clip-text text-white">Featured Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="glass-card rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3 text-white">Remote Team Transformation</h3>
+                            <p class="mb-4 text-sky-100">Led the successful transition of a 50+ member team to remote operations.</p>
+                            <a href="project1.html" class="text-sky-300 hover:text-sky-100 transition-colors">Learn More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="glass-card rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3 text-white">Digital Workflow Optimization</h3>
+                            <p class="mb-4 text-sky-100">Implemented digital solutions resulting in 40% efficiency improvement.</p>
+                            <a href="project2.html" class="text-sky-300 hover:text-sky-100 transition-colors">Learn More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="glass-card rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3 text-white">Cross-Border Team Management</h3>
+                            <p class="mb-4 text-sky-100">Successfully managed teams across multiple time zones and cultures.</p>
+                            <a href="project3.html" class="text-sky-300 hover:text-sky-100 transition-colors">Learn More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="glass-card rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3 text-white">Process Automation Initiative</h3>
+                            <p class="mb-4 text-sky-100">Automated key business processes reducing manual work by 60%.</p>
+                            <a href="project4.html" class="text-sky-300 hover:text-sky-100 transition-colors">Learn More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="glass-card rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3 text-white">Remote Training Program</h3>
+                            <p class="mb-4 text-sky-100">Developed comprehensive remote training materials and protocols.</p>
+                            <a href="project5.html" class="text-sky-300 hover:text-sky-100 transition-colors">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="glass-card py-20">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-sky-200 to-sky-400">Get in Touch</h2>
+                    <div class="flex flex-col items-center space-y-6">
+                        <div class="glass-card px-6 py-4 rounded-lg flex items-center space-x-4 hover:bg-white/10 transition duration-300">
+                            <i class="fas fa-phone text-sky-200"></i>
+                            <span class="text-sky-100">+6993987375</span>
+                        </div>
+                        <div class="glass-card px-6 py-4 rounded-lg flex items-center space-x-4 hover:bg-white/10 transition duration-300">
+                            <i class="fas fa-envelope text-sky-200"></i>
+                            <a href="mailto:seinnmarlar@gmail.com" class="text-sky-100 hover:text-sky-200">seinnmarlar@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="bg-white/5 py-6">
+        <div class="container mx-auto px-6 text-center text-sky-100">
+            <p> 2025 Seinn Mar Lar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
