@@ -41,22 +41,59 @@
         .float-animation {
             animation: float 3s ease-in-out infinite;
         }
+        .mobile-menu {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.flex {
+            transform: translateY(0);
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(0); }
+            to { transform: translateY(-100%); }
+        }
+        .slide-down {
+            animation: slideDown 0.3s ease-in-out forwards;
+        }
+        .slide-up {
+            animation: slideUp 0.3s ease-in-out forwards;
+        }
     </style>
 </head>
 <body class="gradient-bg min-h-screen text-white">
     <div class="flex justify-center pt-4 fixed w-full top-0 z-50">
-        <nav class="glass-nav rounded-full px-8 py-3 w-auto max-w-2xl mx-4">
-            <div class="flex items-center space-x-8">
-                <a href="#" class="text-xl font-bold">Seinn Mar Lar</a>
-                <div class="flex space-x-6">
+        <nav class="glass-nav rounded-full px-8 py-3 w-full max-w-2xl mx-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-xl font-bold">Seinn Mar Lar </a>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6">
                     <a href="#home" class="hover:text-sky-200 transition-colors">Home</a>
                     <a href="#about" class="hover:text-sky-200 transition-colors">About</a>
                     <a href="#projects" class="hover:text-sky-200 transition-colors">Projects</a>
                     <a href="#contact" class="hover:text-sky-200 transition-colors">Contact</a>
                 </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
             </div>
         </nav>
     </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-20 left-4 right-4 hidden flex-col glass-card rounded-lg p-4 z-40">
+        <a href="#home" class="py-2 px-4 hover:bg-white/10 rounded transition-colors">Home</a>
+        <a href="#about" class="py-2 px-4 hover:bg-white/10 rounded transition-colors">About</a>
+        <a href="#projects" class="py-2 px-4 hover:bg-white/10 rounded transition-colors">Projects</a>
+        <a href="#contact" class="py-2 px-4 hover:bg-white/10 rounded transition-colors">Contact</a>
+    </div>
+
     <div class="pt-20">
         <main>
             <!-- Hero Section -->
@@ -75,7 +112,7 @@
             <!-- About Section -->
             <section id="about" class="glass-card py-20 my-12">
                 <div class="container mx-auto px-6">
-                    <h2 class="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-sky-200 to-sky-400">About Me</h2>
+                    <h2 class="text-4xl font-bold mb-12 text-center bg-clip-text text-white">About Me</h2>
                     <div class="max-w-3xl mx-auto">
                         <p class="text-lg leading-relaxed mb-6 text-sky-100">
                             As a Remote Operations Manager, I specialize in streamlining business processes and managing remote teams effectively. With extensive experience in project management and team coordination, I help organizations achieve their operational goals while maintaining high efficiency in a remote work environment.
