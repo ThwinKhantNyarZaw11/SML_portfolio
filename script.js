@@ -1,3 +1,33 @@
+// Mobile menu toggle
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuItems = document.querySelectorAll('#mobile-menu a');
+
+// Toggle mobile menu
+function toggleMobileMenu() {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('flex');
+}
+
+// Close mobile menu when clicking a link
+mobileMenuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+    });
+});
+
+// Toggle mobile menu on button click
+mobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+    }
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -49,13 +79,3 @@ document.querySelectorAll('#projects .grid > div').forEach(card => {
     card.classList.add('opacity-0', 'translate-y-10', 'transition', 'duration-500', 'ease-out');
     observer.observe(card);
 });
-
-// Mobile menu functionality (if needed in the future)
-const mobileMenuButton = document.querySelector('.mobile-menu-button');
-const mobileMenu = document.querySelector('.mobile-menu');
-
-if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-}
